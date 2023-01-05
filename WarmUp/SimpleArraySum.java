@@ -1,4 +1,3 @@
-package WarmUp;
 // https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
 
 import java.util.ArrayList;

@@ -1,5 +1,4 @@
 // https://www.hackerrank.com/challenges/a-very-big-sum/problem?isFullScreen=true
-package WarmUp;
 
 import java.util.ArrayList;
 import java.util.List;
