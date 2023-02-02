@@ -10,12 +10,15 @@ public class AppendAndDelete {
 
         if ((greatestLen + secLen) <= k) {
             return "Yes";
+
         } else {
 
             for (int i = 0; i < secLen; i++) {
 
                 if (!(s.charAt(i) == t.charAt(i))) {
+                    
                     k -= s.length() - i;
+
                     if (k >= t.length() - i) {
                         return "Yes";
                     } else {
