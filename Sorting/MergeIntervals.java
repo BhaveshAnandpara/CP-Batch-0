@@ -9,7 +9,6 @@ public class MergeIntervals {
 
     public static int[][] merge(int[][] intervals) {
 
-
         // Brute Force Approach
 
         int intLen = intervals.length;
@@ -19,7 +18,6 @@ public class MergeIntervals {
 
         int temp = 0;
         List<List<Integer>> result = new ArrayList<>();
-
 
         // sorts the array using bubble Sort
 
@@ -51,7 +49,7 @@ public class MergeIntervals {
                 if (result.size() > 0)
                     result.remove(result.size() - 1);
 
-                //Merging the Items    
+                // Merging the Items
 
                 result.add(new ArrayList<>(Arrays.asList(
                         Math.min(intervals[i][0], intervals[i + 1][0]),
@@ -62,7 +60,7 @@ public class MergeIntervals {
 
             } else {
 
-                if (intLen == 2 || i == 0 ) {
+                if (intLen == 2 || i == 0) {
 
                     result.add(new ArrayList<>(Arrays.asList(
                             intervals[i][0],
@@ -81,8 +79,6 @@ public class MergeIntervals {
             }
 
         }
-
-
 
         int[][] resultArr = new int[result.size()][2];
 
@@ -104,7 +100,7 @@ public class MergeIntervals {
         // int[][] arr = { {1,4},{0,2},{3,5} };
         // int[][] arr = { {1,3} };
         // int[][] arr = { { 1, 4 }, { 5, 6 } };
-        // int[][] arr = { {4,5},{2,4},{4,6},{3,4},{0,0},{1,1},{3,5},{2,2} };
+        int[][] arr = { { 4, 5 }, { 2, 4 }, { 4, 6 }, { 3, 4 }, { 0, 0 }, { 1, 1 }, { 3, 5 }, { 2, 2 } };
 
         int[][] result = merge(arr);
 
