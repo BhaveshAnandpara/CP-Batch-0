@@ -40,7 +40,7 @@ public class CountGoodNumbers {
             if( (y&1) == 1 ) {
                 res = (res * x)  % p;
             }
-
+            
             //increase power of x everytime
             x = (x*x) % p;
             // divide n by 2
