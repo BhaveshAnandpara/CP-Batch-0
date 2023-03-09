@@ -61,14 +61,22 @@ public class Subset {
 
         outer.add(new ArrayList<>());
 
-        for (int i = 0; i < arr.length ; i++) {
+        int dupCount = 0;
+
+        for (int i = 0; i < arr.length; i++) {
 
             int size = outer.size();
 
             int j = 0;
-            if( i != 0 && arr[i - 1] == arr[i]  ) j = size/2;
+            
+            if (i != 0 && arr[i - 1] == arr[i]) {
+                j = (size + dupCount) / 2 ;
+                dupCount = j ;
+            } else {
+                dupCount = 0;
+            }
 
-            for ( ; j < size; j++) {
+            for (; j < size; j++) {
 
                 List<Integer> internal = new ArrayList<>(outer.get(j));
                 internal.add(arr[i]);
@@ -85,9 +93,10 @@ public class Subset {
         // subseq("", "abc");
         // System.out.println(ans);
 
-        int[] arr = { 1, 2, 2 };
+        int[] arr = { 1,2,2, 2 };
         System.out.println(repSubseqIterative(arr));
 
     }
 
 }
+
